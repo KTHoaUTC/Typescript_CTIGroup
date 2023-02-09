@@ -3,18 +3,18 @@
 type Name = string;
 type Age = number;
 type gioiTinh = boolean;
-type DiaChi = undefined;
+//type diaChi = undefined;
 type phoneNumber = null;
 
 //Khai báo type cho các biến: string, number, boolean, undefined, null, date =>
-const myName: Name = "Khuat Thi Hoa";
+const myName: Name = 'Khuat Thi Hoa';
 const age: Age = 22;
 const phone: phoneNumber = null;
 const gioi: gioiTinh = true;
-const addDress = undefined;
-console.log("-----********------");
-console.log("Ten " + myName + " Tuoi " + age + " Gioi Tinh " + gioi);
-console.log("-----********------");
+//const DiaChi: diaChi = undefined;
+console.log('-----********------');
+console.log('Ten ' + myName + ' Tuoi ' + age + ' Gioi Tinh ' + gioi);
+console.log('-----********------');
 
 //khai báo biến với các type trên. dùng lệnh check type để kiểm tra
 
@@ -23,63 +23,61 @@ console.log(typeof age); //kieu number
 console.log(typeof phone); //kieu undefined
 console.log(typeof gioi); //kieu boolean
 if (phone === null) {
-  console.log("kieu null rong");
+    console.log('kieu null rong');
 }
-console.log("-----********------");
+console.log('-----********------');
+
 //Khai báo type cho các Object (id, name, gender, birthday)
 //=> khai báo biến với type trên, nhập dữ liệu đúng và sai => dùng lệnh check type để kiểm tra
 type Id = number;
 type Name1 = string;
 type Gender = boolean;
-type Birthday = Date;
-
+//type Birthday = Date;
 const id: Id = 1;
-const name1: Name1 = "Khuất Thị Hoa";
+const name1: Name1 = 'Khuất Thị Hoa';
 const gender: Gender = true;
 const birthday = new Date(2001, 1, 5);
 
 const profile = `id: ${id} \nTen: ${name1}`;
 console.log(profile);
-console.log("Giới Tính:");
-console.log(gender ? "Nữ" : "Nam");
-
+console.log('Giới Tính: ' + gender ? 'Nữ' : 'Nam');
 console.log(
-  "Ngày, tháng, năm sinh: " +
+    'Ngày, tháng, năm sinh: ' +
     birthday.getDate() +
-    "/" +
+    '/' +
     birthday.getMonth() +
-    "/" +
+    '/' +
     birthday.getFullYear()
 );
 console.log(birthday.toDateString());
-console.log("-----********------");
+console.log('-----********------');
 console.log(typeof birthday);
 console.log(typeof gender);
 
 //Khai báo type cho Object chung (chưa biết trước các trường dữ liệu)
-console.log("-----********------");
-type info = {};
+console.log('-----********------');
+
 const info = {
-  name: "Khuất Thị Hoa",
-  age: 22,
-  phone: 0865169700,
-  addDress: "Hà Nội",
-  gender: "Nữ",
+    name: 'Khuất Thị Hoa',
+    age: 22,
+    phone: 5597054450,
+    addDress: 'Hà Nội',
+    gender: 'Nữ',
 };
 console.log(
-  "Ten: " +
+    'Ten: ' +
     info.name +
-    "\nTuoi: " +
+    '\nTuoi: ' +
     info.age +
-    "\nSo Dien Thoai: " +
+    '\nSo Dien Thoai: ' +
     info.phone +
-    "\nDia chi: " +
+    '\nDia chi: ' +
     info.addDress +
-    "\nGioi Tinh: " +
+    '\nGioi Tinh: ' +
     info.gender
 );
 console.log(typeof info);
-console.log("-----********------");
+console.log('-----********------');
 //Khai báo type cho Object nested (ex: user.name.last)
 type User = {
   name: string;
@@ -91,13 +89,12 @@ type User = {
   };
 };
 const user: User = {
-  name: "Hoa",
-  birth: new Date(2001, 12, 20),
-  phone: 087865756,
-  cat: {
-    color: "black",
-    age: 5,
-  },
+    name: 'Hoa',
+    birth: new Date(2001, 12, 20),
+    phone: 3424234756,
+    cat: {
+        color: 'black',
+        age: 5,
+    },
 };
 console.log(user.cat.color);
-//Khai báo type theo kiểu generic với đối số truyền vào là các type cơ bản: string, number, boolean,…
