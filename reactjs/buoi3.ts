@@ -204,7 +204,9 @@ let result2 = sumNum(3, 5, 7, 9);
 console.log(result1 + "\n" + result2);
 
 console.log("-----****LODASH****------");
+
 const lodash = require("lodash");
+
 let arraySample = ["This", "is", "Lodash", "in", "Typescript"];
 let firstElem = lodash.first(arraySample); //để lấy phần tử đầu tiên của mảng.
 let lastElem = lodash.last(arraySample); //lấy phần tử hoặc cuối cùng của mảng.
